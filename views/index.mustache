@@ -5,15 +5,11 @@
     <title></title>
   </head>
   <body>
-
-    Hi, I am HTML
-
-    <h5> {{ rightNow }} </h5>
-
-    {{ #listOfNumbers }}
-    <div class="">
-      <strong>{{ username }}</strong>
+    {{ #users }}
+    <div class="users">
+      <img src={{avatar}} alt=""/>
+      <strong>{{ name }}</strong>
     </div>
-    {{ /listOfNumbers }}
+    {{ /users }}
   </body>
 </html>

@@ -12,8 +12,7 @@ app.get('/', function (req, res) {
   // accessing the users inside the data.js file
 
     res.render("index", {
-      rightNow: "oh hai",
-      listOfNumbers: data.users
+      users: data.users
     })
 })
 app.listen(3000, function () {
