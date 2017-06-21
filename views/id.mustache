@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <title></title>
+  </head>
+  <body>
+    {{#users}}
+    <div class="idusermain">
+        <img src={{avatar}} alt="robot avatars"/>
+        <div class="idcontent">
+          <h1>{{name}}</h1>
+          <h3>{{#address.city}}{{address.city}},{{/address.city}}{{^address.city}}{{/address.city}} {{address.country}} ||{{#job}} {{job}}, {{company}}{{/job}}{{^job}}Available for Hire{{/job}}</h3>
+          <h3>{{email}} || {{phone}}</h3>
+          {{#university}}<h3>Education: {{university}}</h3>{{/university}}{{^university}}{{/university}}
+          <h3>Skills: {{#skills}} {{.}} {{/skills}}</h3>
+        </div>
+    </div>
+    {{/users}}
+  </body>
+</html>
